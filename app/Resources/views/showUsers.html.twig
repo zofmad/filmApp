@@ -1,0 +1,20 @@
+{# empty Twig template #}
+{#{% extends '::base.html.twig' %}#}
+Lista userow:
+{% for user in users %}
+{#    if{% hasrole('ROLE_USER') %}#}
+{#        <li>{{dump(user)}}</li>#}
+        <br>
+        <ul>
+            Mail: <li>{{user.email}}</li>
+            Username: <li> 
+            <li>{{user.roles[0]}}</li>
+            <a href="{{url("filmapp_user_changerole", {'id': user.id})}}">Zmien role</a>
+            <a href="{{url("filmapp_user_changerole", {'id': user.id})}}">Usun uzytkownika</a>
+{#        <a href#}
+    {% else %}
+        Nie ma userow.
+{% endfor %} 
+    
+
+

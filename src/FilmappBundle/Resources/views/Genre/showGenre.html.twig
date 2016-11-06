@@ -1,0 +1,13 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}FilmappBundle:Genre:showGenre{% endblock %}
+
+{% block body %}
+    <h1>Welcome to the Genre:showGenre page</h1>
+    {{genre.id}}{{genre.name}}
+    
+    {% if is_granted('ROLE_ADMIN') %}
+         <a href="{{path('filmapp_genre_editgenre', {'id': movie.id})}}">Edytuj film</a>
+         <a href="{{path('filmapp_movie_deletegenre', {'id': movie.id})}}">Usun gatunek</a>
+    {% endif %}
+{% endblock %}

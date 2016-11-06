@@ -1,0 +1,53 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Actor list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Dateofbirth</th>
+                <th>Biography</th>
+                <th>Rating</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('actor_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.firstName }}</td>
+                <td>{{ entity.lastName }}</td>
+                <td>{% if entity.dateOfBirth %}{{ entity.dateOfBirth|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.biography }}</td>
+                <td>{{ entity.rating }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('actor_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    {% if is_granted('USER_ADMIN') %}
+                        <li>
+                            <a href="{{ path('actor_edit', { 'id': entity.id }) }}">edit</a>
+                        </li>
+                    {% endif %}
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        {% if is_granted('ROLE_ADMIN') or is_granted('ROLE_USER')%}
+            <li>
+                <a href="{{ path('actor_new') }}">
+                    Create a new entry
+                </a>
+            </li>
+        {% endif %}
+    </ul>
+    {% endblock %}

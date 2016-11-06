@@ -1,0 +1,27 @@
+{# empty Twig template #}
+
+{% extends "::base.html.twig" %}
+
+{% block body %}
+   
+    {% for movie in movies %}
+        <li>Nazwa: {{movie.name}} 
+            Rok produkcji: {{movie.productionYear}} 
+        </li>
+        <a href="{{ path('filmapp_movie_showmovie', {'id': movie.id}) }}">
+            Przejdz do filmu
+        </a>
+    {% else %}
+        Nie istnieja filmy
+    {% endfor %}
+    <br><br>
+    {% if is_granted('ROLE_ADMIN') or is_granted('ROLE_USER')%}
+        <a href="{{path('filmapp_movie_createmovie')}}">Dodaj film</a>
+    {% endif %}
+{% endblock %}
+    
+
+
+
+
+

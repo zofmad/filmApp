@@ -1,0 +1,45 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>User</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id </th>
+                
+                <th>Username </th> 
+                
+                <th>Mail </th> 
+                
+                <th>Last login </th> 
+                
+            </tr>
+            <tr>
+                <td>{{ entity.id }} </td> 
+                <td>{{ entity.username}} </td> 
+                <td>{{ entity.email}} </td> 
+                <td>{{ entity.lastLogin.date}} </td> 
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('user') }}">
+            Back to the list
+        </a>
+    </li>
+    
+    {% if is_granted('ROLE_ADMIN') or is_granted('ROLE_USER')%}
+        <li>
+            <a href="{{ path('user_edit', { 'id': entity.id }) }}">
+                Edit
+            </a>
+        </li>
+    {% endif %}
+    {% if is_granted('ROLE_ADMIN') %}
+        <li>{{ form(delete_form) }}</li>
+    {% endif %}
+</ul>
+{% endblock %}

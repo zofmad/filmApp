@@ -1,0 +1,32 @@
+{% extends "::base.html.twig" %}
+{#{% form_theme form 'bootstrap_3_layout.html.twig' %}#}
+
+{% block title %}FilmappBundle:Movie:createMovie{% endblock %}
+
+{% block body %}
+<h1>Welcome to the Movie:createMovie page</h1>
+
+    {{form_start(form)}}
+    <div>
+    {{form_label(form.name)}}
+    {{form_widget(form.name)}}
+    </div>
+        <div>
+    {{form_label(form.production_year)}}
+    {{form_widget(form.production_year)}}
+    </div>
+        <div>
+    {{form_label(form.description)}}
+    {{form_widget(form.description)}}
+    </div>
+        <div>
+    {{form_label(form.rating)}}
+    {{form_widget(form.rating)}}
+    </div>
+   {# <div>
+        {{ form_widget(form.save)}}
+    </div>#}
+
+{#    {{form_widget(form)}}#}
+    {{form_end(form)}}
+{% endblock %}

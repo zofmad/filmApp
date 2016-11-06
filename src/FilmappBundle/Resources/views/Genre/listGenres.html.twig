@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+
+{% block title %}FilmappBundle:Genre:listGenres{% endblock %}
+
+{% block body %}
+<h1>Welcome to the Genre:listGenres page</h1>
+
+{% for genre in genres %}
+
+    <li>Nazwa: {{genre.name}}</li>
+    
+    
+    
+    
+{% endfor %}
+    
+{% endblock %}

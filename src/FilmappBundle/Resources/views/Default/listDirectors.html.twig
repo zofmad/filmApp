@@ -1,0 +1,15 @@
+{# empty Twig template #}
+
+
+
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    
+    {% for director in directors %}
+        <a href="{{ url('Director_show', { 'id': director.id }) }}">
+            <br>
+            {{ director.firstName }} {{director.lastName }}
+        </a>
+    {% endfor %} 
+{% endblock %}

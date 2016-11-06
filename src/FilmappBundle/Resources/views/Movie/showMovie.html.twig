@@ -1,0 +1,25 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}FilmappBundle:Movie:showMovie{% endblock %}
+
+{% block body %}
+ Nazwa: {{movie.name}} 
+ Opis: {{movie.description}} 
+ Ocena: {{movie.rating}} 
+ Gatunki:
+ {% for genre in movie.genres %}
+     {{ genre.name }}
+     {% else %}
+         Brak gatunków
+ {% endfor %}
+ 
+ {% if is_granted('ROLE_ADMIN') %}
+     <a href="{{path('filmapp_movie_editmovie', {'id': movie.id})}}">Edytuj film</a>
+     <a href="{{path('filmapp_movie_deletemovie', {'id': movie.id})}}">Usun film</a>
+ {% endif %}
+ <br>
+ <a href="{{path('filmapp_movie_listmovies')}}">Wróć do listy</a>
+ 
+ 
+{#{{dump(movie)}}#}
+{% endblock %}

@@ -1,0 +1,15 @@
+{# empty Twig template #}
+
+
+
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    {% for actor in actors %}
+        <a href="{{ url('actor_show', {'id': actor.id}) }}">
+            <br>
+            {{ actor.firstName }} {{actor.lastName}} </a>
+    {% endfor %}
+    
+    
+{% endblock %}
