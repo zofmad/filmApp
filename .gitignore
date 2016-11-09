@@ -1,10 +1,10 @@
 
 
-
+*~
 /notatki
-/vendor/
+/vendor
 /.idea
-/nbpproject/
+/nbproject
 # Created by https://www.gitignore.io/api/symfony
 
 ### Symfony ###
