@@ -26,7 +26,14 @@ class DefaultController extends BaseController
      */
     public function indexAction(){
 //        return new Response('');
-        return $this->render('FilmappBundle:Default:index.html.twig');
+        $em = $this->getDoctrine()->getManager();
+
+        $query = $em->createQuery( 'SELECT m FROM FilmappBundle:Movie m WHERE m.rating > 7 ORDER BY m.rating DESC' );
+        
+//        $movies = $query->setMaxResults(5)->getResult();
+        $movies = $query->getResult();
+        
+        return $this->render('FilmappBundle:Default:index.html.twig', array('movies' => $movies));
     }
 //    
 //    /**

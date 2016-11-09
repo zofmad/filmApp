@@ -15,11 +15,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Movie
 {
-    public function __toString()
-    {
-    return $this->name;
     
-    }
     /**
      * 
      * @ORM\ManyToMany(targetEntity="Actor", mappedBy="movies")
@@ -83,7 +79,11 @@ class Movie
      */
     private $rating;
 
-
+    public function __toString()
+    {
+        return $this->name;
+    
+    }
     /**
      * Get id
      *
@@ -284,4 +284,8 @@ class Movie
     {
         return $this->directors;
     }
+    
+    
+    
+    
 }

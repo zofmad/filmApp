@@ -5,7 +5,7 @@
 {% block body %}
    
     {% for movie in movies %}
-        <li>Nazwa: {{movie.name}} 
+        <li>Nazwa: {{movie}} 
             Rok produkcji: {{movie.productionYear}} 
         </li>
         <a href="{{ path('filmapp_movie_showmovie', {'id': movie.id}) }}">

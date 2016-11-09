@@ -21,20 +21,20 @@ class __TwigTemplate_3a9ecf0afce4dd8c59c76223177922dbdd8e01419f4a4caccea2541ab90
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_b83c1fe4fcde30d03931025f3e7e23db4393f6ccf78b511ee0b537425ed48198 = $this->env->getExtension("native_profiler");
-        $__internal_b83c1fe4fcde30d03931025f3e7e23db4393f6ccf78b511ee0b537425ed48198->enter($__internal_b83c1fe4fcde30d03931025f3e7e23db4393f6ccf78b511ee0b537425ed48198_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FilmappBundle:Default:index.html.twig"));
+        $__internal_81024c6d1de48341e8571abfda841268199b83a20faaeb18413b1cb8815b3840 = $this->env->getExtension("native_profiler");
+        $__internal_81024c6d1de48341e8571abfda841268199b83a20faaeb18413b1cb8815b3840->enter($__internal_81024c6d1de48341e8571abfda841268199b83a20faaeb18413b1cb8815b3840_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FilmappBundle:Default:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_b83c1fe4fcde30d03931025f3e7e23db4393f6ccf78b511ee0b537425ed48198->leave($__internal_b83c1fe4fcde30d03931025f3e7e23db4393f6ccf78b511ee0b537425ed48198_prof);
+        $__internal_81024c6d1de48341e8571abfda841268199b83a20faaeb18413b1cb8815b3840->leave($__internal_81024c6d1de48341e8571abfda841268199b83a20faaeb18413b1cb8815b3840_prof);
 
     }
 
     // line 6
     public function block_body($context, array $blocks = array())
     {
-        $__internal_5207af9008bc4db7bad7b834e93b25e99cb8efcb65b347596a3367338be6c035 = $this->env->getExtension("native_profiler");
-        $__internal_5207af9008bc4db7bad7b834e93b25e99cb8efcb65b347596a3367338be6c035->enter($__internal_5207af9008bc4db7bad7b834e93b25e99cb8efcb65b347596a3367338be6c035_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_97aedbfb649fba056baa4082817c71a3d6604bb8205d1a808c19607510defc4a = $this->env->getExtension("native_profiler");
+        $__internal_97aedbfb649fba056baa4082817c71a3d6604bb8205d1a808c19607510defc4a->enter($__internal_97aedbfb649fba056baa4082817c71a3d6604bb8205d1a808c19607510defc4a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 7
         echo "    Welcome ";
@@ -63,14 +63,121 @@ class __TwigTemplate_3a9ecf0afce4dd8c59c76223177922dbdd8e01419f4a4caccea2541ab90
     ";
         }
         // line 15
-        echo "        
+        echo "    <table>
+        <th>
+            <ol>Najlepsze filmy:</ol></th> 
+    ";
+        // line 18
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["movies"]) ? $context["movies"] : $this->getContext($context, "movies")));
+        foreach ($context['_seq'] as $context["_key"] => $context["movie"]) {
+            // line 19
+            echo "        <li>";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["movie"], "name", array()), "html", null, true);
+            echo " rating:";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["movie"], "rating", array()), "html", null, true);
+            echo "</li>    
+    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['movie'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 21
+        echo "    </ol>
+    <table>
+        
+ 
+                <div class=\"row\">
+                    <div class=\"col-lg-4\">
+                        <div class=\"panel panel-default\">
+                            <div class=\"panel-heading\">
+                                <h3 class=\"panel-title\"><i class=\"fa fa-long-arrow-right fa-fw\"></i> Best films</h3>
+                            </div>
+                            <div class=\"panel-body\">
+                            <ol>
+                                ";
+        // line 33
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["movies"]) ? $context["movies"] : $this->getContext($context, "movies")));
+        foreach ($context['_seq'] as $context["_key"] => $context["movie"]) {
+            // line 34
+            echo "                                    <li>";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["movie"], "name", array()), "html", null, true);
+            echo " rating:";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["movie"], "rating", array()), "html", null, true);
+            echo "</li>    
+                                ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['movie'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 36
+        echo "                            </ol>
+                                 ";
+        // line 43
+        echo "                            </div>
+                        </div>
+                    </div>
+                             <div class=\"row\">
+                    <div class=\"col-lg-4\">
+                        <div class=\"panel panel-default\">
+                            <div class=\"panel-heading\">
+                                <h3 class=\"panel-title\"><i class=\"fa fa-long-arrow-right fa-fw\"></i> Best films</h3>
+                            </div>
+                            <div class=\"panel-body\">
+                            <ol>
+                                ";
+        // line 54
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["movies"]) ? $context["movies"] : $this->getContext($context, "movies")));
+        foreach ($context['_seq'] as $context["_key"] => $context["movie"]) {
+            // line 55
+            echo "                                    <li>";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["movie"], "name", array()), "html", null, true);
+            echo " rating:";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["movie"], "rating", array()), "html", null, true);
+            echo "</li>    
+                                ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['movie'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 57
+        echo "                            </ol>
+                                 ";
+        // line 59
+        echo "                                <div id=\"morris-donut-chart\"></div>
+                                <div class=\"text-right\">
+                               ";
+        // line 62
+        echo "                              <a href=\"#\">View Details <i class=\"fa fa-arrow-circle-right\"></i></a>
+                               ";
+        // line 68
+        echo "        ";
+        // line 85
+        echo "                            </div>
+                        </div>
+                    </div>
+                   ";
+        // line 128
+        echo "                        ";
+        // line 131
+        echo "                     ";
+        // line 134
+        echo "                    <div class=\"col-lg-4\">
+                        <div class=\"panel panel-default\">
+                            <div class=\"panel-heading\">
+                                <h3 class=\"panel-title\"><i class=\"fa fa-money fa-fw\"></i> Transactions Panel</h3>
+                            </div>       
+        
+    
    ";
-        // line 24
+        // line 149
         echo "               ";
-        // line 38
+        // line 163
         echo "                     ";
         
-        $__internal_5207af9008bc4db7bad7b834e93b25e99cb8efcb65b347596a3367338be6c035->leave($__internal_5207af9008bc4db7bad7b834e93b25e99cb8efcb65b347596a3367338be6c035_prof);
+        $__internal_97aedbfb649fba056baa4082817c71a3d6604bb8205d1a808c19607510defc4a->leave($__internal_97aedbfb649fba056baa4082817c71a3d6604bb8205d1a808c19607510defc4a_prof);
 
     }
 
@@ -86,7 +193,7 @@ class __TwigTemplate_3a9ecf0afce4dd8c59c76223177922dbdd8e01419f4a4caccea2541ab90
 
     public function getDebugInfo()
     {
-        return array (  71 => 38,  69 => 24,  66 => 15,  61 => 13,  57 => 12,  53 => 11,  48 => 10,  46 => 9,  40 => 7,  34 => 6,  11 => 2,);
+        return array (  178 => 163,  176 => 149,  167 => 134,  165 => 131,  163 => 128,  158 => 85,  156 => 68,  153 => 62,  149 => 59,  146 => 57,  135 => 55,  131 => 54,  118 => 43,  115 => 36,  104 => 34,  100 => 33,  86 => 21,  75 => 19,  71 => 18,  66 => 15,  61 => 13,  57 => 12,  53 => 11,  48 => 10,  46 => 9,  40 => 7,  34 => 6,  11 => 2,);
     }
 }
 /* {#Hello {{ name }}!#}*/
@@ -103,7 +210,132 @@ class __TwigTemplate_3a9ecf0afce4dd8c59c76223177922dbdd8e01419f4a4caccea2541ab90
 /*         <a href="{{path("Director_new")}}">Dodaj rezysera</a>*/
 /*         <a href="{{path("filmapp_genre_creategenre")}}">Dodaj gatunek</a>*/
 /*     {% endif %}*/
+/*     <table>*/
+/*         <th>*/
+/*             <ol>Najlepsze filmy:</ol></th> */
+/*     {% for movie in movies %}*/
+/*         <li>{{movie.name}} rating:{{movie.rating}}</li>    */
+/*     {% endfor %}*/
+/*     </ol>*/
+/*     <table>*/
 /*         */
+/*  */
+/*                 <div class="row">*/
+/*                     <div class="col-lg-4">*/
+/*                         <div class="panel panel-default">*/
+/*                             <div class="panel-heading">*/
+/*                                 <h3 class="panel-title"><i class="fa fa-long-arrow-right fa-fw"></i> Best films</h3>*/
+/*                             </div>*/
+/*                             <div class="panel-body">*/
+/*                             <ol>*/
+/*                                 {% for movie in movies %}*/
+/*                                     <li>{{movie.name}} rating:{{movie.rating}}</li>    */
+/*                                 {% endfor %}*/
+/*                             </ol>*/
+/*                                  {#{% block body %}*/
+/*                                 <div id="morris-donut-chart"></div>*/
+/*                                 <div class="text-right">*/
+/*                                     {% endblock %}*/
+/*                               {#   {#  {# <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>*/
+/*                                {# </div>#}*/
+/*                             </div>*/
+/*                         </div>*/
+/*                     </div>*/
+/*                              <div class="row">*/
+/*                     <div class="col-lg-4">*/
+/*                         <div class="panel panel-default">*/
+/*                             <div class="panel-heading">*/
+/*                                 <h3 class="panel-title"><i class="fa fa-long-arrow-right fa-fw"></i> Best films</h3>*/
+/*                             </div>*/
+/*                             <div class="panel-body">*/
+/*                             <ol>*/
+/*                                 {% for movie in movies %}*/
+/*                                     <li>{{movie.name}} rating:{{movie.rating}}</li>    */
+/*                                 {% endfor %}*/
+/*                             </ol>*/
+/*                                  {#{% block body %}#}*/
+/*                                 <div id="morris-donut-chart"></div>*/
+/*                                 <div class="text-right">*/
+/*                                {#     {% endblock %}#}*/
+/*                               <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>*/
+/*                                {#</div>*/
+/*                             </div>*/
+/*                         </div>*/
+/*                     </div>*/
+/*                           {#   <div class="row">#}*/
+/*         {#            <div class="col-lg-4">*/
+/*                         <div class="panel panel-default">*/
+/*                             <div class="panel-heading">*/
+/*                                 <h3 class="panel-title"><i class="fa fa-long-arrow-right fa-fw"></i> Best films</h3>*/
+/*                             </div>*/
+/*                             <div class="panel-body">*/
+/*                             <ol>*/
+/*                                 {% for movie in movies %}*/
+/*                                     <li>{{movie.name}} rating:{{movie.rating}}</li>    */
+/*                                 {% endfor %}*/
+/*                             </ol>*/
+/*                                  {#{% block body %}*/
+/*                                 <div id="morris-donut-chart"></div>*/
+/*                                 <div class="text-right">*/
+/*                                     {% endblock %}*/
+/*                               {#   {#  {# <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>*/
+/*                                {# </div>#}*/
+/*                             </div>*/
+/*                         </div>*/
+/*                     </div>*/
+/*                    {# <div class="col-lg-4">*/
+/*                         <div class="panel panel-default">*/
+/*                             <div class="panel-heading">*/
+/*                                 <h3 class="panel-title"><i class="fa fa-clock-o fa-fw"></i> Tasks Panel</h3>*/
+/*                             </div>*/
+/*                             <div class="panel-body">*/
+/*                                 <div class="list-group">*/
+/*                                     <a href="#" class="list-group-item">*/
+/*                                         {#<span class="badge">just now</span>*/
+/*                                         <i class="fa fa-fw fa-calendar"></i> Calendar updated*/
+/*                                     </a>*/
+/*                                     {#<a href="#" class="list-group-item">*/
+/*                                         <span class="badge">4 minutes ago</span>*/
+/*                                         <i class="fa fa-fw fa-comment"></i> Commented on a post*/
+/*                                     </a>*/
+/*                                     <a href="#" class="list-group-item">*/
+/*                                         <span class="badge">23 minutes ago</span>*/
+/*                                         <i class="fa fa-fw fa-truck"></i> Order 392 shipped*/
+/*                                     </a>*/
+/*                                     <a href="#" class="list-group-item">*/
+/*                                         <span class="badge">46 minutes ago</span>*/
+/*                                         <i class="fa fa-fw fa-money"></i> Invoice 653 has been paid*/
+/*                                     </a>*/
+/*                                     <a href="#" class="list-group-item">*/
+/*                                         <span class="badge">1 hour ago</span>*/
+/*                                         <i class="fa fa-fw fa-user"></i> A new user has been added*/
+/*                                     </a>*/
+/*                                     <a href="#" class="list-group-item">*/
+/*                                         <span class="badge">2 hours ago</span>*/
+/*                                         <i class="fa fa-fw fa-check"></i> Completed task: "pick up dry cleaning"*/
+/*                                     </a>*/
+/*                                     <a href="#" class="list-group-item">*/
+/*                                         <span class="badge">yesterday</span>*/
+/*                                         <i class="fa fa-fw fa-globe"></i> Saved the world*/
+/*                                     </a>*/
+/*                                     <a href="#" class="list-group-item">*/
+/*                                         <span class="badge">two days ago</span>*/
+/*                                         <i class="fa fa-fw fa-check"></i> Completed task: "fix error on sales page"*/
+/*                                     </a>*/
+/*                                 </div>#}*/
+/*                         {#        <div class="text-right">*/
+/*                                     <a href="#">View All Activity <i class="fa fa-arrow-circle-right"></i></a>*/
+/*                                 </div>#}*/
+/*                      {#       </div>*/
+/*                         </div>*/
+/*                     </div>#}*/
+/*                     <div class="col-lg-4">*/
+/*                         <div class="panel panel-default">*/
+/*                             <div class="panel-heading">*/
+/*                                 <h3 class="panel-title"><i class="fa fa-money fa-fw"></i> Transactions Panel</h3>*/
+/*                             </div>       */
+/*         */
+/*     */
 /*    {# <div class="collapse navbar-collapse navbar-ex1-collapse">*/
 /*                 <ul class="nav navbar-nav side-nav">*/
 /*                     <li class="active">*/

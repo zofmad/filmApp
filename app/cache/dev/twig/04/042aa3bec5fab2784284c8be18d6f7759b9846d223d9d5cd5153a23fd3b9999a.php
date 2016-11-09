@@ -17,8 +17,8 @@ class __TwigTemplate_a4de801e57ceadadab6e2827d2ec91f2c4716f6fe8ab4d0d42eb6124bcd
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_725f3c9195af61bc31e3adfa0c05980c93964858454e0186defb0b55321e7f23 = $this->env->getExtension("native_profiler");
-        $__internal_725f3c9195af61bc31e3adfa0c05980c93964858454e0186defb0b55321e7f23->enter($__internal_725f3c9195af61bc31e3adfa0c05980c93964858454e0186defb0b55321e7f23_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "::base.html.twig"));
+        $__internal_85248204cedaa866300a8122f868ec1b440c59eabfecf885d7b566a7362aaafe = $this->env->getExtension("native_profiler");
+        $__internal_85248204cedaa866300a8122f868ec1b440c59eabfecf885d7b566a7362aaafe->enter($__internal_85248204cedaa866300a8122f868ec1b440c59eabfecf885d7b566a7362aaafe_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "::base.html.twig"));
 
         // line 13
         echo "
@@ -266,9 +266,21 @@ class __TwigTemplate_a4de801e57ceadadab6e2827d2ec91f2c4716f6fe8ab4d0d42eb6124bcd
         // line 243
         $this->displayBlock('body', $context, $blocks);
         // line 245
-        echo "            ";
-        // line 520
-        echo "        </div>
+        echo "       ";
+        // line 377
+        echo "
+      ";
+        // line 389
+        echo "                                   ";
+        // line 445
+        echo "                          ";
+        // line 515
+        echo "                <!-- /.row -->
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
         <!-- /#page-wrapper -->
 
     </div>
@@ -282,28 +294,28 @@ class __TwigTemplate_a4de801e57ceadadab6e2827d2ec91f2c4716f6fe8ab4d0d42eb6124bcd
 </html>
 ";
         
-        $__internal_725f3c9195af61bc31e3adfa0c05980c93964858454e0186defb0b55321e7f23->leave($__internal_725f3c9195af61bc31e3adfa0c05980c93964858454e0186defb0b55321e7f23_prof);
+        $__internal_85248204cedaa866300a8122f868ec1b440c59eabfecf885d7b566a7362aaafe->leave($__internal_85248204cedaa866300a8122f868ec1b440c59eabfecf885d7b566a7362aaafe_prof);
 
     }
 
     // line 243
     public function block_body($context, array $blocks = array())
     {
-        $__internal_25c20f32e67eab25992dc8b1fb3b27223020671a15473342d8152782baa675bd = $this->env->getExtension("native_profiler");
-        $__internal_25c20f32e67eab25992dc8b1fb3b27223020671a15473342d8152782baa675bd->enter($__internal_25c20f32e67eab25992dc8b1fb3b27223020671a15473342d8152782baa675bd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_014ad8b765818243c1469290f25f66702d093f285e76727fefb62120acb6b540 = $this->env->getExtension("native_profiler");
+        $__internal_014ad8b765818243c1469290f25f66702d093f285e76727fefb62120acb6b540->enter($__internal_014ad8b765818243c1469290f25f66702d093f285e76727fefb62120acb6b540_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 244
         echo "    ";
         
-        $__internal_25c20f32e67eab25992dc8b1fb3b27223020671a15473342d8152782baa675bd->leave($__internal_25c20f32e67eab25992dc8b1fb3b27223020671a15473342d8152782baa675bd_prof);
+        $__internal_014ad8b765818243c1469290f25f66702d093f285e76727fefb62120acb6b540->leave($__internal_014ad8b765818243c1469290f25f66702d093f285e76727fefb62120acb6b540_prof);
 
     }
 
     // line 525
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_2e6836fc54f7a509c4999535efc2e1b8bfe2f3629e97e8a122f8fa0a6540ca81 = $this->env->getExtension("native_profiler");
-        $__internal_2e6836fc54f7a509c4999535efc2e1b8bfe2f3629e97e8a122f8fa0a6540ca81->enter($__internal_2e6836fc54f7a509c4999535efc2e1b8bfe2f3629e97e8a122f8fa0a6540ca81_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_ad8280c5e6ad0aaadb1fc727379deb263697e867c798081541f56dff7605affa = $this->env->getExtension("native_profiler");
+        $__internal_ad8280c5e6ad0aaadb1fc727379deb263697e867c798081541f56dff7605affa->enter($__internal_ad8280c5e6ad0aaadb1fc727379deb263697e867c798081541f56dff7605affa_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         // line 526
         echo "    <!-- jQuery -->
@@ -318,7 +330,7 @@ class __TwigTemplate_a4de801e57ceadadab6e2827d2ec91f2c4716f6fe8ab4d0d42eb6124bcd
     <script src=\"bundles/filmapp/js/plugins/morris/morris-data.js\"></script>
 ";
         
-        $__internal_2e6836fc54f7a509c4999535efc2e1b8bfe2f3629e97e8a122f8fa0a6540ca81->leave($__internal_2e6836fc54f7a509c4999535efc2e1b8bfe2f3629e97e8a122f8fa0a6540ca81_prof);
+        $__internal_ad8280c5e6ad0aaadb1fc727379deb263697e867c798081541f56dff7605affa->leave($__internal_ad8280c5e6ad0aaadb1fc727379deb263697e867c798081541f56dff7605affa_prof);
 
     }
 
@@ -334,7 +346,7 @@ class __TwigTemplate_a4de801e57ceadadab6e2827d2ec91f2c4716f6fe8ab4d0d42eb6124bcd
 
     public function getDebugInfo()
     {
-        return array (  309 => 526,  303 => 525,  296 => 244,  290 => 243,  280 => 537,  278 => 525,  271 => 520,  269 => 245,  267 => 243,  259 => 237,  256 => 213,  250 => 210,  247 => 209,  245 => 208,  239 => 206,  233 => 202,  227 => 199,  221 => 196,  218 => 195,  210 => 188,  202 => 183,  197 => 182,  189 => 177,  185 => 175,  180 => 167,  174 => 164,  169 => 161,  167 => 160,  164 => 159,  160 => 130,  147 => 118,  130 => 101,  101 => 72,  98 => 70,  94 => 67,  89 => 64,  61 => 39,  55 => 36,  49 => 33,  43 => 30,  24 => 13,);
+        return array (  321 => 526,  315 => 525,  308 => 244,  302 => 243,  292 => 537,  290 => 525,  278 => 515,  276 => 445,  274 => 389,  271 => 377,  269 => 245,  267 => 243,  259 => 237,  256 => 213,  250 => 210,  247 => 209,  245 => 208,  239 => 206,  233 => 202,  227 => 199,  221 => 196,  218 => 195,  210 => 188,  202 => 183,  197 => 182,  189 => 177,  185 => 175,  180 => 167,  174 => 164,  169 => 161,  167 => 160,  164 => 159,  160 => 130,  147 => 118,  130 => 101,  101 => 72,  98 => 70,  94 => 67,  89 => 64,  61 => 39,  55 => 36,  49 => 33,  43 => 30,  24 => 13,);
     }
 }
 /* {#<!DOCTYPE html>*/
@@ -581,7 +593,7 @@ class __TwigTemplate_a4de801e57ceadadab6e2827d2ec91f2c4716f6fe8ab4d0d42eb6124bcd
 /*         <div id="page-wrapper">*/
 /* {% block body %}*/
 /*     {% endblock %}*/
-/*             {#<div class="container-fluid">*/
+/*        {#     <div class="container-fluid">*/
 /* */
 /*                 <!-- Page Heading -->*/
 /*                 <div class="row">*/
@@ -712,9 +724,9 @@ class __TwigTemplate_a4de801e57ceadadab6e2827d2ec91f2c4716f6fe8ab4d0d42eb6124bcd
 /*                         </div>*/
 /*                     </div>*/
 /*                 </div>*/
-/*                 <!-- /.row -->*/
+/*                 <!-- /.row -->#}*/
 /* */
-/*                 <div class="row">*/
+/*       {#          <div class="row">*/
 /*                     <div class="col-lg-4">*/
 /*                         <div class="panel panel-default">*/
 /*                             <div class="panel-heading">*/
@@ -724,8 +736,8 @@ class __TwigTemplate_a4de801e57ceadadab6e2827d2ec91f2c4716f6fe8ab4d0d42eb6124bcd
 /*                                  {% block body %}*/
 /*                                 <div id="morris-donut-chart"></div>*/
 /*                                 <div class="text-right">*/
-/*                                     {% endblock %}*/
-/*                                  {#  {# <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>*/
+/*                                     {% endblock %}#}*/
+/*                                    {# <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>*/
 /*                                {# </div>*/
 /*                             </div>*/
 /*                         </div>*/
@@ -776,12 +788,12 @@ class __TwigTemplate_a4de801e57ceadadab6e2827d2ec91f2c4716f6fe8ab4d0d42eb6124bcd
 /*                             </div>*/
 /*                         </div>*/
 /*                     </div>*/
-/*                     <div class="col-lg-4">*/
+/* {#{#                    <div class="col-lg-4">*/
 /*                         <div class="panel panel-default">*/
 /*                             <div class="panel-heading">*/
 /*                                 <h3 class="panel-title"><i class="fa fa-money fa-fw"></i> Transactions Panel</h3>*/
-/*                             </div>*/
-/*                             <div class="panel-body">*/
+/*                             </div>#}*/
+/*                           {# <div class="panel-body">*/
 /*                                 <div class="table-responsive">*/
 /*                                     <table class="table table-bordered table-hover table-striped">*/
 /*                                         <thead>*/
@@ -850,12 +862,12 @@ class __TwigTemplate_a4de801e57ceadadab6e2827d2ec91f2c4716f6fe8ab4d0d42eb6124bcd
 /*                             </div>*/
 /*                         </div>*/
 /*                     </div>*/
-/*                 </div>*/
+/*                 </div>#}*/
 /*                 <!-- /.row -->*/
 /* */
 /*             </div>*/
 /*             <!-- /.container-fluid -->*/
-/* #}*/
+/* */
 /*         </div>*/
 /*         <!-- /#page-wrapper -->*/
 /* */
