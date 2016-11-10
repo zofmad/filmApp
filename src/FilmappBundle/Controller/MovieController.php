@@ -13,7 +13,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 
 use FilmappBundle\Entity\Movie;
 
-class MovieController extends BaseController
+class MovieController extends Controller
 {
     
     

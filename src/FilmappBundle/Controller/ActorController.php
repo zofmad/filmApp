@@ -15,7 +15,7 @@ use FilmappBundle\Form\ActorType;
  *
  * @Route("/actor")
  */
-class ActorController extends BaseController
+class ActorController extends Controller
 {
 
     /**

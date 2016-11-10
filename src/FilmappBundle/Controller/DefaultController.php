@@ -8,7 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Response;
 //use Mane
 
-class DefaultController extends BaseController
+class DefaultController extends Controller
 {
 //    /**
 //     * @Route("/hello/{name}")
@@ -19,7 +19,9 @@ class DefaultController extends BaseController
 //        return array('name' => $name);
 //    }
 //    
-    
+    public function em(){
+        return $this->getDoctrine()->getManager();
+    }
     /**
      * @Route("/")
      * @Template()
@@ -32,6 +34,12 @@ class DefaultController extends BaseController
         
 //        $movies = $query->setMaxResults(5)->getResult();
         $movies = $query->getResult();
+        $query = $em->createQuery( 'SELECT d FROM FilmappBundle:Director d WHERE d.rating > 7 ORDER BY d.rating DESC' );
+        $directors = $query->setMaxResults(5)->getResult();
+        $query = $em->createQuery( 'SELECT a FROM FilmappBundle:Actor a WHERE a.rating > 7 ORDER BY a.rating DESC' );
+        $actors = $query->getResult();
+        
+        
         
         return $this->render('FilmappBundle:Default:index.html.twig', array('movies' => $movies));
     }

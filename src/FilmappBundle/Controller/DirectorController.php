@@ -15,7 +15,7 @@ use FilmappBundle\Form\DirectorType;
  *
  * @Route("/Director")
  */
-class DirectorController extends BaseController
+class DirectorController extends Controller
 {
     
 

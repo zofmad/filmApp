@@ -15,7 +15,7 @@ use FilmappBundle\Form\UserType;
  *
  * @Route("/user")
  */
-class UserController extends BaseController
+class UserController extends Controller
 {
 
     /**

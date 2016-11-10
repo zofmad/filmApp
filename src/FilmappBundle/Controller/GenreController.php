@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 
 
-class GenreController extends BaseController
+class GenreController extends Controller
 {
     private function generateGenreForm(Genre $genre){
         return $this->createFormBuilder($genre)
