@@ -33,15 +33,18 @@ class DefaultController extends Controller
         $query = $em->createQuery( 'SELECT m FROM FilmappBundle:Movie m WHERE m.rating > 7 ORDER BY m.rating DESC' );
         
 //        $movies = $query->setMaxResults(5)->getResult();
-        $movies = $query->getResult();
-        $query = $em->createQuery( 'SELECT d FROM FilmappBundle:Director d WHERE d.rating > 7 ORDER BY d.rating DESC' );
-        $directors = $query->setMaxResults(5)->getResult();
-        $query = $em->createQuery( 'SELECT a FROM FilmappBundle:Actor a WHERE a.rating > 7 ORDER BY a.rating DESC' );
-        $actors = $query->getResult();
+        $movies = $query->setMaxResults(10)->getResult();
+        $query = $em->createQuery( 'SELECT d FROM FilmappBundle:Director d ORDER BY d.rating DESC' );
+        $directors = $query->setMaxResults(10)->getResult();
+        
+        $query = $em->createQuery( 'SELECT a FROM FilmappBundle:Actor a ORDER BY a.rating DESC' );
+        $actors = $query->setMaxResults(10)->getResult();
         
         
         
-        return $this->render('FilmappBundle:Default:index.html.twig', array('movies' => $movies));
+        return $this->render('FilmappBundle:Default:index.html.twig', array('directors' => $directors,
+                                                                            'actors' => $actors,
+                                                                            'movies' => $movies));
     }
 //    
 //    /**

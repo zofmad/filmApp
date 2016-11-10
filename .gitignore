@@ -5,6 +5,9 @@
 /vendor
 /.idea
 /nbproject
+
+/src/FilmappBundle/Controller/UserController1.php
+/src/FilmappBundle/Controller/BaseController.php
 # Created by https://www.gitignore.io/api/symfony
 
 ### Symfony ###

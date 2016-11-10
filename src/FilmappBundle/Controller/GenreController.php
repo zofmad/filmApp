@@ -143,4 +143,3 @@ class GenreController extends Controller
     
 
 }
-//kobntorler - uzytkownik

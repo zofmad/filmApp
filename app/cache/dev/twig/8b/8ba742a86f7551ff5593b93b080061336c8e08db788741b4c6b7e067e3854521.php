@@ -21,20 +21,20 @@ class __TwigTemplate_3a9ecf0afce4dd8c59c76223177922dbdd8e01419f4a4caccea2541ab90
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_81024c6d1de48341e8571abfda841268199b83a20faaeb18413b1cb8815b3840 = $this->env->getExtension("native_profiler");
-        $__internal_81024c6d1de48341e8571abfda841268199b83a20faaeb18413b1cb8815b3840->enter($__internal_81024c6d1de48341e8571abfda841268199b83a20faaeb18413b1cb8815b3840_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FilmappBundle:Default:index.html.twig"));
+        $__internal_af53328ea67bb2e30f012d8cb34305aa4d3599d112df5b992e21aec8a409abf4 = $this->env->getExtension("native_profiler");
+        $__internal_af53328ea67bb2e30f012d8cb34305aa4d3599d112df5b992e21aec8a409abf4->enter($__internal_af53328ea67bb2e30f012d8cb34305aa4d3599d112df5b992e21aec8a409abf4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FilmappBundle:Default:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_81024c6d1de48341e8571abfda841268199b83a20faaeb18413b1cb8815b3840->leave($__internal_81024c6d1de48341e8571abfda841268199b83a20faaeb18413b1cb8815b3840_prof);
+        $__internal_af53328ea67bb2e30f012d8cb34305aa4d3599d112df5b992e21aec8a409abf4->leave($__internal_af53328ea67bb2e30f012d8cb34305aa4d3599d112df5b992e21aec8a409abf4_prof);
 
     }
 
     // line 6
     public function block_body($context, array $blocks = array())
     {
-        $__internal_97aedbfb649fba056baa4082817c71a3d6604bb8205d1a808c19607510defc4a = $this->env->getExtension("native_profiler");
-        $__internal_97aedbfb649fba056baa4082817c71a3d6604bb8205d1a808c19607510defc4a->enter($__internal_97aedbfb649fba056baa4082817c71a3d6604bb8205d1a808c19607510defc4a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_2b9cea209d93fcfc0610d9d73313d8ab18571676c23ab07ab31939de8bd78561 = $this->env->getExtension("native_profiler");
+        $__internal_2b9cea209d93fcfc0610d9d73313d8ab18571676c23ab07ab31939de8bd78561->enter($__internal_2b9cea209d93fcfc0610d9d73313d8ab18571676c23ab07ab31939de8bd78561_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 7
         echo "    Welcome ";
@@ -62,122 +62,137 @@ class __TwigTemplate_3a9ecf0afce4dd8c59c76223177922dbdd8e01419f4a4caccea2541ab90
             echo "\">Dodaj gatunek</a>
     ";
         }
-        // line 15
-        echo "    <table>
-        <th>
-            <ol>Najlepsze filmy:</ol></th> 
-    ";
-        // line 18
+        // line 23
+        echo "<br><br>
+              
+                            
+<div class=\"row\">
+    <div class=\"col-lg-4\">
+        <div class=\"panel panel-default\">
+            <div class=\"panel-heading\">
+                <h3 class=\"panel-title\"><i class=\"fa fa-long-arrow-right fa-fw\"></i> Best films</h3>
+            </div>
+            <div class=\"panel-body\">
+            <ol>
+                ";
+        // line 34
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["movies"]) ? $context["movies"] : $this->getContext($context, "movies")));
         foreach ($context['_seq'] as $context["_key"] => $context["movie"]) {
-            // line 19
-            echo "        <li>";
+            // line 35
+            echo "                    <li>";
             echo twig_escape_filter($this->env, $this->getAttribute($context["movie"], "name", array()), "html", null, true);
             echo " rating:";
             echo twig_escape_filter($this->env, $this->getAttribute($context["movie"], "rating", array()), "html", null, true);
             echo "</li>    
-    ";
+                ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['movie'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 21
-        echo "    </ol>
-    <table>
-        
- 
-                <div class=\"row\">
-                    <div class=\"col-lg-4\">
-                        <div class=\"panel panel-default\">
-                            <div class=\"panel-heading\">
-                                <h3 class=\"panel-title\"><i class=\"fa fa-long-arrow-right fa-fw\"></i> Best films</h3>
-                            </div>
-                            <div class=\"panel-body\">
-                            <ol>
-                                ";
-        // line 33
+        // line 37
+        echo "            </ol>
+                 ";
+        // line 44
+        echo "            </div>
+        </div>
+    </div>
+
+<div class=\"row\">
+    <div class=\"col-lg-4\">
+        <div class=\"panel panel-default\">
+            <div class=\"panel-heading\">
+                <h3 class=\"panel-title\"><i class=\"fa fa-long-arrow-right fa-fw\"></i> Best actors</h3>
+            </div>
+            <div class=\"panel-body\">
+            <ol>
+                ";
+        // line 56
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["movies"]) ? $context["movies"] : $this->getContext($context, "movies")));
-        foreach ($context['_seq'] as $context["_key"] => $context["movie"]) {
-            // line 34
-            echo "                                    <li>";
-            echo twig_escape_filter($this->env, $this->getAttribute($context["movie"], "name", array()), "html", null, true);
+        $context['_seq'] = twig_ensure_traversable((isset($context["actors"]) ? $context["actors"] : $this->getContext($context, "actors")));
+        foreach ($context['_seq'] as $context["_key"] => $context["actor"]) {
+            // line 57
+            echo "                    <li>";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["actor"], "firstName", array()), "html", null, true);
+            echo " ";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["actor"], "lastName", array()), "html", null, true);
             echo " rating:";
-            echo twig_escape_filter($this->env, $this->getAttribute($context["movie"], "rating", array()), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($context["actor"], "rating", array()), "html", null, true);
             echo "</li>    
-                                ";
+                ";
         }
         $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['movie'], $context['_parent'], $context['loop']);
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['actor'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 36
-        echo "                            </ol>
-                                 ";
-        // line 43
-        echo "                            </div>
-                        </div>
-                    </div>
-                             <div class=\"row\">
-                    <div class=\"col-lg-4\">
-                        <div class=\"panel panel-default\">
-                            <div class=\"panel-heading\">
-                                <h3 class=\"panel-title\"><i class=\"fa fa-long-arrow-right fa-fw\"></i> Best films</h3>
-                            </div>
-                            <div class=\"panel-body\">
-                            <ol>
-                                ";
-        // line 54
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["movies"]) ? $context["movies"] : $this->getContext($context, "movies")));
-        foreach ($context['_seq'] as $context["_key"] => $context["movie"]) {
-            // line 55
-            echo "                                    <li>";
-            echo twig_escape_filter($this->env, $this->getAttribute($context["movie"], "name", array()), "html", null, true);
-            echo " rating:";
-            echo twig_escape_filter($this->env, $this->getAttribute($context["movie"], "rating", array()), "html", null, true);
-            echo "</li>    
-                                ";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['movie'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 57
-        echo "                            </ol>
-                                 ";
         // line 59
-        echo "                                <div id=\"morris-donut-chart\"></div>
-                                <div class=\"text-right\">
-                               ";
-        // line 62
-        echo "                              <a href=\"#\">View Details <i class=\"fa fa-arrow-circle-right\"></i></a>
-                               ";
-        // line 68
+        echo "            </ol>
+                 ";
+        // line 66
+        echo "            </div>
+        </div>
+    </div>
+            <div class=\"row\">
+    <div class=\"col-lg-4\">
+        <div class=\"panel panel-default\">
+            <div class=\"panel-heading\">
+                <h3 class=\"panel-title\"><i class=\"fa fa-long-arrow-right fa-fw\"></i> Best directors</h3>
+            </div>
+            <div class=\"panel-body\">
+            <ol>
+                ";
+        // line 77
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["directors"]) ? $context["directors"] : $this->getContext($context, "directors")));
+        foreach ($context['_seq'] as $context["_key"] => $context["director"]) {
+            // line 78
+            echo "                    <li>";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["director"], "firstName", array()), "html", null, true);
+            echo " ";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["director"], "lastName", array()), "html", null, true);
+            echo " rating:";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["director"], "rating", array()), "html", null, true);
+            echo "</li>    
+                ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['director'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 80
+        echo "            </ol>
+                 ";
+        // line 87
+        echo "            </div>
+        </div>
+    </div>
+                            
+                            ";
+        // line 103
+        echo "                                 ";
+        // line 104
+        echo "                               ";
+        // line 106
+        echo "                               ";
+        // line 107
+        echo "                           ";
+        // line 108
+        echo "                               ";
+        // line 113
         echo "        ";
-        // line 85
-        echo "                            </div>
-                        </div>
-                    </div>
-                   ";
-        // line 128
-        echo "                        ";
-        // line 131
-        echo "                     ";
-        // line 134
-        echo "                    <div class=\"col-lg-4\">
-                        <div class=\"panel panel-default\">
-                            <div class=\"panel-heading\">
-                                <h3 class=\"panel-title\"><i class=\"fa fa-money fa-fw\"></i> Transactions Panel</h3>
-                            </div>       
+        // line 130
+        echo "               ";
+        // line 141
+        echo "                                        ";
+        // line 183
+        echo "   
         
     
    ";
-        // line 149
+        // line 194
         echo "               ";
-        // line 163
+        // line 208
         echo "                     ";
         
-        $__internal_97aedbfb649fba056baa4082817c71a3d6604bb8205d1a808c19607510defc4a->leave($__internal_97aedbfb649fba056baa4082817c71a3d6604bb8205d1a808c19607510defc4a_prof);
+        $__internal_2b9cea209d93fcfc0610d9d73313d8ab18571676c23ab07ab31939de8bd78561->leave($__internal_2b9cea209d93fcfc0610d9d73313d8ab18571676c23ab07ab31939de8bd78561_prof);
 
     }
 
@@ -193,7 +208,7 @@ class __TwigTemplate_3a9ecf0afce4dd8c59c76223177922dbdd8e01419f4a4caccea2541ab90
 
     public function getDebugInfo()
     {
-        return array (  178 => 163,  176 => 149,  167 => 134,  165 => 131,  163 => 128,  158 => 85,  156 => 68,  153 => 62,  149 => 59,  146 => 57,  135 => 55,  131 => 54,  118 => 43,  115 => 36,  104 => 34,  100 => 33,  86 => 21,  75 => 19,  71 => 18,  66 => 15,  61 => 13,  57 => 12,  53 => 11,  48 => 10,  46 => 9,  40 => 7,  34 => 6,  11 => 2,);
+        return array (  193 => 208,  191 => 194,  186 => 183,  184 => 141,  182 => 130,  180 => 113,  178 => 108,  176 => 107,  174 => 106,  172 => 104,  170 => 103,  164 => 87,  161 => 80,  148 => 78,  144 => 77,  131 => 66,  128 => 59,  115 => 57,  111 => 56,  97 => 44,  94 => 37,  83 => 35,  79 => 34,  66 => 23,  61 => 13,  57 => 12,  53 => 11,  48 => 10,  46 => 9,  40 => 7,  34 => 6,  11 => 2,);
     }
 }
 /* {#Hello {{ name }}!#}*/
@@ -210,17 +225,83 @@ class __TwigTemplate_3a9ecf0afce4dd8c59c76223177922dbdd8e01419f4a4caccea2541ab90
 /*         <a href="{{path("Director_new")}}">Dodaj rezysera</a>*/
 /*         <a href="{{path("filmapp_genre_creategenre")}}">Dodaj gatunek</a>*/
 /*     {% endif %}*/
-/*     <table>*/
+/* {#    <table>*/
 /*         <th>*/
 /*             <ol>Najlepsze filmy:</ol></th> */
 /*     {% for movie in movies %}*/
 /*         <li>{{movie.name}} rating:{{movie.rating}}</li>    */
 /*     {% endfor %}*/
 /*     </ol>*/
-/*     <table>*/
-/*         */
-/*  */
-/*                 <div class="row">*/
+/*     <table>#}*/
+/* <br><br>*/
+/*               */
+/*                             */
+/* <div class="row">*/
+/*     <div class="col-lg-4">*/
+/*         <div class="panel panel-default">*/
+/*             <div class="panel-heading">*/
+/*                 <h3 class="panel-title"><i class="fa fa-long-arrow-right fa-fw"></i> Best films</h3>*/
+/*             </div>*/
+/*             <div class="panel-body">*/
+/*             <ol>*/
+/*                 {% for movie in movies %}*/
+/*                     <li>{{movie.name}} rating:{{movie.rating}}</li>    */
+/*                 {% endfor %}*/
+/*             </ol>*/
+/*                  {#{% block body %}*/
+/*                 <div id="morris-donut-chart"></div>*/
+/*                 <div class="text-right">*/
+/*                     {% endblock %}*/
+/*               {#   {#  {# <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>*/
+/*                {# </div>#}*/
+/*             </div>*/
+/*         </div>*/
+/*     </div>*/
+/* */
+/* <div class="row">*/
+/*     <div class="col-lg-4">*/
+/*         <div class="panel panel-default">*/
+/*             <div class="panel-heading">*/
+/*                 <h3 class="panel-title"><i class="fa fa-long-arrow-right fa-fw"></i> Best actors</h3>*/
+/*             </div>*/
+/*             <div class="panel-body">*/
+/*             <ol>*/
+/*                 {% for actor in actors %}*/
+/*                     <li>{{actor.firstName}} {{actor.lastName}} rating:{{actor.rating}}</li>    */
+/*                 {% endfor %}*/
+/*             </ol>*/
+/*                  {#{% block body %}*/
+/*                 <div id="morris-donut-chart"></div>*/
+/*                 <div class="text-right">*/
+/*                     {% endblock %}*/
+/*               {#   {#  {# <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>*/
+/*                {# </div>#}*/
+/*             </div>*/
+/*         </div>*/
+/*     </div>*/
+/*             <div class="row">*/
+/*     <div class="col-lg-4">*/
+/*         <div class="panel panel-default">*/
+/*             <div class="panel-heading">*/
+/*                 <h3 class="panel-title"><i class="fa fa-long-arrow-right fa-fw"></i> Best directors</h3>*/
+/*             </div>*/
+/*             <div class="panel-body">*/
+/*             <ol>*/
+/*                 {% for director in directors %}*/
+/*                     <li>{{director.firstName}} {{director.lastName}} rating:{{director.rating}}</li>    */
+/*                 {% endfor %}*/
+/*             </ol>*/
+/*                  {#{% block body %}*/
+/*                 <div id="morris-donut-chart"></div>*/
+/*                 <div class="text-right">*/
+/*                     {% endblock %}*/
+/*               {#   {#  {# <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>*/
+/*                {# </div>#}*/
+/*             </div>*/
+/*         </div>*/
+/*     </div>*/
+/*                             */
+/*                             {# <div class="row">*/
 /*                     <div class="col-lg-4">*/
 /*                         <div class="panel panel-default">*/
 /*                             <div class="panel-heading">*/
@@ -228,36 +309,15 @@ class __TwigTemplate_3a9ecf0afce4dd8c59c76223177922dbdd8e01419f4a4caccea2541ab90
 /*                             </div>*/
 /*                             <div class="panel-body">*/
 /*                             <ol>*/
-/*                                 {% for movie in movies %}*/
-/*                                     <li>{{movie.name}} rating:{{movie.rating}}</li>    */
+/*                                 {% for actor in actors %}*/
+/*                                     <li>{{actor.firstName}}{{actor.lastName}} rating:{{actor.rating}}</li>    */
 /*                                 {% endfor %}*/
-/*                             </ol>*/
-/*                                  {#{% block body %}*/
-/*                                 <div id="morris-donut-chart"></div>*/
-/*                                 <div class="text-right">*/
-/*                                     {% endblock %}*/
-/*                               {#   {#  {# <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>*/
-/*                                {# </div>#}*/
-/*                             </div>*/
-/*                         </div>*/
-/*                     </div>*/
-/*                              <div class="row">*/
-/*                     <div class="col-lg-4">*/
-/*                         <div class="panel panel-default">*/
-/*                             <div class="panel-heading">*/
-/*                                 <h3 class="panel-title"><i class="fa fa-long-arrow-right fa-fw"></i> Best films</h3>*/
-/*                             </div>*/
-/*                             <div class="panel-body">*/
-/*                             <ol>*/
-/*                                 {% for movie in movies %}*/
-/*                                     <li>{{movie.name}} rating:{{movie.rating}}</li>    */
-/*                                 {% endfor %}*/
-/*                             </ol>*/
+/*                             </ol>#}*/
 /*                                  {#{% block body %}#}*/
-/*                                 <div id="morris-donut-chart"></div>*/
-/*                                 <div class="text-right">*/
+/*                                {# <div id="morris-donut-chart"></div>*/
+/*                                 <div class="text-right">#}*/
 /*                                {#     {% endblock %}#}*/
-/*                               <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>*/
+/*                            {#   <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>#}*/
 /*                                {#</div>*/
 /*                             </div>*/
 /*                         </div>*/
@@ -280,17 +340,17 @@ class __TwigTemplate_3a9ecf0afce4dd8c59c76223177922dbdd8e01419f4a4caccea2541ab90
 /*                                     {% endblock %}*/
 /*                               {#   {#  {# <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>*/
 /*                                {# </div>#}*/
-/*                             </div>*/
+/*                {#             </div>*/
 /*                         </div>*/
 /*                     </div>*/
-/*                    {# <div class="col-lg-4">*/
+/*                    <div class="col-lg-4">*/
 /*                         <div class="panel panel-default">*/
 /*                             <div class="panel-heading">*/
 /*                                 <h3 class="panel-title"><i class="fa fa-clock-o fa-fw"></i> Tasks Panel</h3>*/
 /*                             </div>*/
 /*                             <div class="panel-body">*/
 /*                                 <div class="list-group">*/
-/*                                     <a href="#" class="list-group-item">*/
+/*                                     <a href="#" class="list-group-item">#}*/
 /*                                         {#<span class="badge">just now</span>*/
 /*                                         <i class="fa fa-fw fa-calendar"></i> Calendar updated*/
 /*                                     </a>*/
@@ -322,18 +382,18 @@ class __TwigTemplate_3a9ecf0afce4dd8c59c76223177922dbdd8e01419f4a4caccea2541ab90
 /*                                         <span class="badge">two days ago</span>*/
 /*                                         <i class="fa fa-fw fa-check"></i> Completed task: "fix error on sales page"*/
 /*                                     </a>*/
-/*                                 </div>#}*/
+/*                                 </div>*/
 /*                         {#        <div class="text-right">*/
 /*                                     <a href="#">View All Activity <i class="fa fa-arrow-circle-right"></i></a>*/
-/*                                 </div>#}*/
+/*                                 </div>*/
 /*                      {#       </div>*/
 /*                         </div>*/
-/*                     </div>#}*/
-/*                     <div class="col-lg-4">*/
+/*                     </div>*/
+/*                {#     <div class="col-lg-4">*/
 /*                         <div class="panel panel-default">*/
 /*                             <div class="panel-heading">*/
 /*                                 <h3 class="panel-title"><i class="fa fa-money fa-fw"></i> Transactions Panel</h3>*/
-/*                             </div>       */
+/*                             </div>    #}   */
 /*         */
 /*     */
 /*    {# <div class="collapse navbar-collapse navbar-ex1-collapse">*/
